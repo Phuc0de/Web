@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #eee;
+    margin: 0;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+header {
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+header a {
+    margin-right: 50px;
+}
+
+.nav1, .nav2 {
+    display: flex;
+    gap: 15px;
+}
+
+header a:hover {
+    color: #ff6b6b;
+}
+
+/* Carousel */
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: -50px;
+    z-index: 0;
+}
+
+.carousel .List {
+    display: flex;
+    animation: slide 15s infinite ease-in-out;
+}
+
+.carousel .List .item {
+    min-width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel .List .item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel .List .item .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel .List .item .content .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.carousel .List .item .content .des {
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100vw); }
+    66% { transform: translateX(-200vw); }
+    100% { transform: translateX(0); }
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.thumbnail {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: 0.6;
+    border: 2px solid transparent;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnail:hover, .thumbnail.active {
+    opacity: 1;
+    border-color: #ff6b6b;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-top: 2px solid #555;
+}
+
+.footer-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    color: #eee;
+    margin: 0 8px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ff6b6b;
+}
+
+.footer-note {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Overlay Background - Register & Login */
+.register-overlay,
+.login-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Shared Form Container Style */
+.register-container,
+.login-container {
+    background-image: url(https://i.pinimg.com/736x/c5/3d/af/c53daf149d156b331a0b341076783be6.jpg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    animation: zoomIn 0.4s ease;
+    text-align: center;
+    position: relative;
+}
+
+.register-container h2,
+.login-container h3 {
+    color: #000;
+}
+
+.register-container input,
+.login-container input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #0e0d0d;
+    border-radius: 5px;
+}
+
+.register-container button,
+.login-container button {
+    padding: 10px 20px;
+    background-color: #628ECB;
+    color: rgb(13, 13, 13);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button:hover,
+.login-container button:hover {
+    background-color: #ff6b6b;
+}
+
+/* Close Button */
+.close-btn,
+.close-btn2 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gen Z Store</title>
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+</head>
+<body>
+    <header>
+        <nav class="nav1">
+            <a href="index.html">Home</a>
+            <a href="productlist.html">Product</a>
+            <a href="comment.html">Comment</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+        <nav class="nav2">
+            <a href="#" id="openLoginForm">Đăng Nhập</a>
+            <a href="#" id="openRegisterForm">Đăng Kí</a>
+        </nav>
+    </header>
+
+    <!-- Form Đăng Ký -->
+    <div class="register-overlay" id="registerForm" style="display:none;">
+        <div class="register-container">
+            <span class="close-btn" id="closeRegisterForm">&times;</span>
+            <h2>Đăng Ký</h2>
+            <form id="registerFormElement" onsubmit="register(event)">
+                <label for="username" style="color: black;">Tên đăng nhập:</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required />
+
+                <label for="email" style="color: black;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Nhập email" required />
+
+                <label for="password" style="color: black;">Mật khẩu:</label>
+                <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required />
+
+                <button type="submit" class="button">Đăng Ký</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Form Đăng Nhập -->
+    <div class="login-overlay" id="loginForm" style="display:none;">
+        <div class="login-container">
+            <span class="close-btn2" id="closeLoginForm">&times;</span>
+            <h3>Đăng Nhập</h3>
+            <form id="loginFormElement">
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Mật khẩu" required />
+                <button type="login">Đăng nhập</button>
+            </form>
+            <p style="color: black;">
+                Bạn chưa có tài khoản?
+                <a href="#" id="button3" style="color: black;">Đăng ký ngay</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Các phần nội dung khác của trang -->
+    <!-- ... -->
+     /div>
+</div>
+
+
+
+ 
+    </div>>  <!--carousel-->
+    <div class="carousel">
+        <div class="List">
+            <div class="item">
+                <img src="images/picture6.jpg">
+                <div class="content">
+                    <div class="author">STORE</div>
+                    <div class="title">GENZ STORE</div>
+                    <div class="topic">SNEAKER</div>
+                    <div class="des">
+                        If we do it together, we will win
+                        If we walk together, we will arrive
+                        If we wear the same shoes, we will walk together and do it together
+                    </div>
+                
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/picture7.jpg">
+                <div class="content">
+                    <div class="author">STORE</div>
+                    <div class="title">GENZ STORE</div>
+                    <div class="topic">SNEAKER</div>
+                    <div class="des">
+                        If we do it together, we will win
+                        <p></p>
+                        If we walk together, we will arrive
+                        <p></p>
+                        If we wear the same shoes, we will walk together and do it together
+                    </div>
+                
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/picture8.jpg">
+                <div class="content">
+                    <div class="author">STORE</div>
+                    <div class="title">GENZ STORE</div>
+                    <div class="topic">SNEAKER</div>
+                    <div class="des">
+                        If we do it together, we will win
+                        If we walk together, we will arrive
+                        If we wear the same shoes, we will walk together and do it together
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+     <!-- Thumbnails -->
+     <div class="thumbnails">
+        <img src="images/picture6.jpg" class="thumbnail" data-index="0">
+        <img src="images/picture7.jpg" class="thumbnail" data-index="1">
+        <img src="images/picture8.jpg" class="thumbnail" data-index="2">
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Liên hệ</h2>
+            <p>GENZ STORE - SNEAKER</p>
+            <p>Hotline: 039xxxxxxx</p>
+            <p>Email: support@genzstore.com</p>
+            <p>Địa chỉ: 123 Đường ABC, Quận 1, TP.HCM</p>
+            <div class="social-icons">
+                <a href="#"><i class="uil uil-facebook-f"></i></a>
+                <a href="#"><i class="uil uil-instagram"></i></a>
+                <a href="#"><i class="uil uil-twitter"></i></a>
+                <a href="#"><i class="uil uil-envelope"></i></a>
+            </div>
+        </div>
+        <p class="footer-note">© 2025 Gen Z Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>
